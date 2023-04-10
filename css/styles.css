@@ -102,6 +102,7 @@ html {
     padding: 10px;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 .second-row > .avatar {
@@ -230,10 +231,13 @@ html {
     background-color: white;
     height: auto;
     padding: 15px;
-    border-radius: 30px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    box-shadow: 2px 2px 4px #c4b9b9;
+    position: relative;
+    overflow: hidden;
 }
 
 .card > .project-name {
@@ -261,27 +265,49 @@ html {
     margin-left: auto;
 }
 
-.card #icon-view,
-.card #icon-github {
+.card .icon-view,
+.card .icon-github {
     height: 30px;
     fill: var(--color-primary);
     margin-left: 8px;
 }
 
-.card #icon-view:hover,
-.card #icon-github:hover {
+.card .icon-view:hover,
+.card .icon-github:hover {
     fill: var(--color-accent);
 }
 
-.announcments {
+.card .stripe {
+    position: absolute;
+    width: 9px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--color-accent);
+}
+
+.announcements {
     grid-column: 2;
     grid-row: 1;
     width: 300px;
-    background-color: green;
+    background-color: var(--color-secondary);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.announcements h3 {
+    font-size: 3rem;
+}
+
+.announcements .announcement-title {
+    font-size: 2.5em;
 }
 
 .trending {
     grid-column: 2;
     grid-row: 2;
-    background-color: purple;
+    background-color: var(--color-secondary);
+    padding: 20px;
 }
