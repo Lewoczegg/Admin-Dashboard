@@ -199,9 +199,89 @@ html {
     margin-bottom: 100px;
 }
 
+/* Main */
 .main {
     background-color: var(--color-secondary);
     grid-column: 2;
     grid-row: 3;
-    height: 1000px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+}
+
+.projects {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    padding: 20px;
+}
+
+.projects h3 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: white;
+    height: auto;
+    padding: 15px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card > .project-name {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.card > .project-name:hover {
+    color: var(--color-accent);
+}
+
+.card > img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.card > p {
+    font-size: 2rem;
+}
+
+.card .links {
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.card #icon-view,
+.card #icon-github {
+    height: 30px;
+    fill: var(--color-primary);
+    margin-left: 8px;
+}
+
+.card #icon-view:hover,
+.card #icon-github:hover {
+    fill: var(--color-accent);
+}
+
+.announcments {
+    grid-column: 2;
+    grid-row: 1;
+    width: 300px;
+    background-color: green;
+}
+
+.trending {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: purple;
 }
