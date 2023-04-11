@@ -105,7 +105,7 @@ html {
     align-items: center;
     display: grid;
     gap: 20px;
-    grid-template-columns: auto 1fr auto auto auto;
+    grid-template-columns: auto 1fr auto;
     padding: 10px;
     position: sticky;
     top: 0;
@@ -125,7 +125,13 @@ html {
     font-weight: 700;
 }
 
-.second-row > button {
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.second-row > .buttons > button {
     border: 0;
     background-color: var(--color-primary);
     color: #ffffff;
@@ -148,7 +154,7 @@ html {
     color: white;
     grid-column: 1;
     grid-row: 1 / -1;
-    padding: 20px;
+    padding: 10px;
     text-shadow: 2px 2px 8px var(--color-text-shadow);
     transition: all 0.3s;
     width: 300px;
@@ -158,7 +164,7 @@ html {
     align-items: center;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .sidebar nav {
@@ -167,7 +173,7 @@ html {
 }
 
 .sidebar .logo {
-    height: 50px;
+    height: 40px;
     margin-right: 5px;
 }
 
@@ -213,7 +219,7 @@ html {
 }
 
 .sidebar.hide {
-    width: 90px;
+    width: 55px;
 }
 
 .sidebar.hide a,
@@ -342,4 +348,79 @@ html {
 
 .right-side .trending > p {
     font-size: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .first-row {
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .first-row img,
+    .first-row svg {
+        height: 30px;
+    }
+    
+    .first-row > .avatar {
+        height: 40px;
+    }
+    
+    .first-row input {
+        width: 40px;
+        font-size: 1.6rem;
+        padding: 5px 15px;
+        margin-left: -14px;
+    }
+    
+    .first-row button {
+        padding: 5px;
+    }
+    
+    .first-row button > svg {
+        height: 2rem;
+    }
+    
+    .first-row .user-name {
+        font-size: 0;
+    }
+
+    .second-row {
+        gap: 10px;
+    }
+    
+    .second-row > .avatar {
+        height: 60px;
+    }
+    
+    .second-row .greeting > p {
+        font-size: 1.4rem;
+    }
+    
+    .second-row .greeting > .user-name {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .second-row > .buttons > button {
+        font-size: 1.6rem;
+        padding: 5px;
+        border-radius: 30px;
+        width: 100px;
+    }
 }

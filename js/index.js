@@ -40,3 +40,7 @@ function toggleTheme() {
 }
 
 heading.addEventListener('click', () => sidebar.classList.toggle('hide'));
+
+if(window.innerWidth <= 900) {
+    sidebar.classList.add('hide');
+}
