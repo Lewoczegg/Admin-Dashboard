@@ -2,6 +2,8 @@ const notificationBell = document.querySelector('.bell');
 const bellPath = document.getElementById('bellPath');
 const theme = document.querySelector('.theme');
 const root = document.documentElement;
+const sidebar = document.querySelector('.sidebar');
+const heading = document.querySelector('.heading');
 
 notificationBell.addEventListener('click', toggleBell);
 
@@ -36,3 +38,5 @@ function toggleTheme() {
         root.classList.add('dark');
     }
 }
+
+heading.addEventListener('click', () => sidebar.classList.toggle('hide'));

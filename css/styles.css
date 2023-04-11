@@ -23,9 +23,9 @@ html {
 }
 
 .container {
-     display: grid;
-     grid-template-columns: minmax(300px, 1fr) 6fr;
-     grid-template-rows: auto auto 1fr;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto 1fr;
 }
 
 /* Header */
@@ -150,6 +150,8 @@ html {
     grid-row: 1 / -1;
     padding: 20px;
     text-shadow: 2px 2px 8px var(--color-text-shadow);
+    transition: all 0.3s;
+    width: 300px;
 }
 
 .sidebar .heading {
@@ -172,6 +174,7 @@ html {
 .sidebar h2 {
     font-size: 4rem;
     color: white;
+    transition: all 0.3s;
 }
 
 .tools {
@@ -197,6 +200,7 @@ html {
 .tools > li > a {
     color: white;
     text-decoration: none;
+    transition: all 0.3s;  
 }
 
 .icon {
@@ -205,7 +209,18 @@ html {
 }
 
 #communities {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+}
+
+.sidebar.hide {
+    width: 90px;
+}
+
+.sidebar.hide a,
+.sidebar.hide h2 {
+    max-width: 0;
+    overflow: hidden;
+    opacity: 0;
 }
 
 /* Main */
